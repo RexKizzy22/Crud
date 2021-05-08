@@ -38,6 +38,7 @@ const controller = () => {
         if (error) return res.status(400).end();
       }
     },
+
     getOne: async (req: Request, res: Response) => {
       const id = parseInt(req.params.id);
 
@@ -54,6 +55,7 @@ const controller = () => {
 
       return res.status(404).end();
     },
+
     post: async (req: Request, res: Response) => {
       const data = req.body;
 
@@ -75,6 +77,7 @@ const controller = () => {
       await fs.writeFile("./database.json", JSON.stringify(file, null, 2));
       res.status(201).json({ data: data });
     },
+
     put: async (req: Request, res: Response) => {
       const id = parseInt(req.params.id);
       const data = req.body;
@@ -96,6 +99,7 @@ const controller = () => {
       await fs.writeFile("./database.json", JSON.stringify(file, null, 2));
       res.status(200).json({ data: newData });
     },
+
     del: async (req: Request, res: Response) => {
       const id = parseInt(req.params.id);
       let data = await readFile();
