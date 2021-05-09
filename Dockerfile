@@ -1,9 +1,12 @@
 FROM node:14.16.0 
 
-WORKDIR /Users/decagon/Desktop/tasks/week-7-node-007-RexKizzy22/Crud
+WORKDIR /Users/Crud 
+
+COPY package.json yarn* ./
+
+RUN yarn 
 
 COPY ./ ./
 
-RUN yarn 
 
 CMD ["/bin/bash"]

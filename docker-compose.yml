@@ -4,9 +4,9 @@ services:
   crud:
     container_name: crud-api
     build: ./
-    working_dir: /Users/decagon/Desktop/tasks/week-7-node-007-RexKizzy22/Crud
+    working_dir: /Users/Crud
     command: yarn start
     ports: 
       - 3000:3000
     volumes:
-      - ./:/Users/decagon/Desktop/tasks/week-7-node-007-RexKizzy22/Crud
+      - ./:/Users/Crud
